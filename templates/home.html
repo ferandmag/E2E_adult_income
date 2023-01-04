@@ -1,3 +1,43 @@
-<h1>
-HelloKrish
-</h1>
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+
+</head>
+
+<body>
+ <div class="login">
+    <h1>Adult income prediction. 0: <50k // 1: >50k </h1>
+
+    <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+        <input type="number" name="Age" placeholder="age" required="required" /><br>
+        <input type="text" name="workclass" placeholder="workclass" required="required" /><br>
+        <input type="text" name="education" placeholder="education" required="required" /><br>
+        <input type="text" name="marital.status" placeholder="marital.status" required="required" /><br>
+        <input type="text" name="occupation" placeholder="occupation" required="required" /><br>
+        <input type="text" name="relationship" placeholder="relationship" required="required" /><br>
+        <input type="text" name="race" placeholder="race" required="required" /><br>
+        <input type="text" name="sex" placeholder="sex" required="required" /><br>
+        <input type="number" name="capital.gain" placeholder="capital.gain" required="required" /><br>
+        <input type="number" name="capital.loss" placeholder="capital.loss" required="required" /><br>
+        <input type="number" name="hours.per.week" placeholder="hours.per.week" required="required" /><br>
+        <input type="text" name="native.country" placeholder="native.country" required="required" /><br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
