@@ -10,9 +10,5 @@
 Create a new environment
 
 '''
-
 python -m venv venv_adult
-
-pip install -r requirements.txt
-
 '''
